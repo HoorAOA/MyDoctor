@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="dim_white">#F8F8F8</color>
+    <color name="black">#000000</color>
+    <color name="primary_color">#ffffff</color>
+    <color name="primary_dark_color">#ffffff</color>
+    <color name="secondary_color">#3d3d3d</color>
+    <color name="secondary_color_new">#323232</color>
+    <color name="secondary_dark_color">#212121</color>
+    <color name="tertiary_color">#DC9B27</color>
+    <color name="tertiary_dark_color">#B68121</color>
+    <color name="accent_color">#6270DD</color>
+    <color name="accent_light_color">#E0E0FE</color>
+    <color name="accent_dark_color">#5665DC</color>
+    <color name="buttons_color">#FD7941</color>
+    <color name="buttons_dark_color">#FF6B2C</color>
+    <color name="hint_color">#bbbbbb</color>
+    <color name="app_logan_color">#1b1b1b</color>
+    <color name="received_chat_color">#3a4048</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="toolbar_bottom_color">#e9e9e9</color>
+
+    <color name="common_button_text_color">#ffffff</color>
+
+    <color name="view_separator_bg_color">#d8d8d8</color>
+    <color name="light_grey_color">#f2f2f2</color>
+    <color name="icon_stroke_color">#F6F5F5</color>
+    <color name="icon_fill_color">#23262E</color>
+    <color name="search_icon_color">#BABABA</color>
+    <!-- Common Color-->
+    <color name="red_color">#FF0000</color>
+    <color name="green_color">#008000</color>
+    <color name="grey_color">#3d4246</color>
+    <color name="light_state_grey_color">#BDBDBD</color>
+    <color name="view_divider_bottom_color">#e9e9e9</color>
+    <color name="text_input_hint_color">#bbbbbb</color>
+    <color name="text_light_version">#c8c8c8</color>
+    <color name="text_input_activated_color">#9a9a9a</color>
+    <color name="dark_grey">#808080</color>
+    <color name="transparent_color">#00FFFFFF</color>
+    <color name="status_text_color">#2ecc71</color>
+    <color name="drag_view_color">#f0f0f0</color>
+    <color name="emergency_color">#ee3f54</color>
+    <color name="emergency_color_pressed">#B42536</color>
+    <color name="facebook_login_button_color">#3b5998</color>
+    <color name="facebook_login_button_color_pressed">#2b4070</color>
+    <color name="google_login_button_color">#4688f1</color>
+    <color name="google_login_button_color_pressed">#2b4070</color>
+
+    <!--Status Color-->
+    <color name="status_cancelled_color">#EF5350</color>
+    <color name="status_new_request_color">#1D8ACF</color>
+    <color name="status_regret_color">#EF5350</color>
+    <color name="status_assigned_color">#01BCD5</color>
+    <color name="status_accepted_color">#3AB44B</color>
+    <color name="status_completed_color">#A9A9A9</color>
+    <color name="status_default_color">#feac00</color>
+
+
+    <!--StateProgressBar-->
+    <color name="background_color">#F2000000</color>
+
+    <color name="foreground_color">#b42379</color>
+
+    <color name="background_text_color">#808080</color>
+
+    <color name="foreground_text_color">#eeeeee</color>
+
+
+</resources>

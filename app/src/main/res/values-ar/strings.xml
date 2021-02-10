@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //App Name
+    <string name="my_doctor">طبيبي</string>
+
+    <string name="settings">الضبط</string>
+    <string name="menu_my_appointments">حجوزاتي</string>
+    <string name="menu_new_appointment">حجز جديد</string>
+    <string name="menu_new_medical_examination">تقرير جديد</string>
+    <string name="menu_title_profile">ملفي الشخصي</string>
+    <string name="menu_my_patients">المرضي</string>
+    <string name="menu_title_sari_pay">Syber Delivery Pay</string>
+    <string name="menu_title_help_legal">المساعدة والقوانين</string>
+    <string name="menu_title_refer_friend">أخبر أصدقائك</string>
+    <string name="menu_title_settings">الضبط</string>
+    <string name="menu_title_jobs">وظائفي</string>
+    <string name="menu_title_transactions">معاملاتي</string>
+
+    <string name="menu_title_notifications">الإخطارات \ الاشعارات</string>
+    <string name="location_permission">يرجى السماح للتطبيق بالدخول إلى موقعك لتحديد وكلاء التوصيل الاقرب.</string>
+    <string name="phone_permission">يرجى السماح للتطبيق بالوصول إلى هوية هاتفك للحصول على أفضل أداء.</string>
+    <string name="storage_permission">يرجى السماح للتطبيق بالوصول إلى بطاقة الذاكرة و وحدة التخزين لحفظ الملفات والصور المهمة.</string>
+    <string name="camera_permission">يرجى السماح للتطبيق بالدخول إلى الكاميرا لالتقاط صورة الملف الشخصي من الكاميرا.</string>
+    <string name="calender_permission">يرجى السماح للتطبيق بالدخول إلى التقويم بحيث يمكن للتطبيق الوصول إلى التواريخ نيابةً عنك.</string>
+    <string name="contacts_permission">يرجى السماح للتطبيق بالدخول إلى جهات الاتصال بحيث يمكن الوصول الى جهة الاتصال و إدارتها نيابةً عنك.</string>
+    <string name="sensor_permission">يرجى السماح للتطبيق بالوصول إلى المستشعر ليتمكن من الوصول إلى / إدارة المستشعر نيابة عنك.</string>
+    <string name="call_permission">يرجى السماح للتطبيق بالدخول إلى المكالمات بحيث يمكن للتطبيق الوصول إلى / إدارة المكالمات نيابةً عنك.</string>
+    <string name="network_permission">يرجى السماح للتطبيق بالوصول إلى الشبكة بحيث يمكن للتطبيق الدخول إلى الشبكة نيابةً عنك.</string>
+    <string name="wifi_permission">يرجى السماح للتطبيق بالدخول إلى wifi حتى يتمكن التطبيق من الوصول إلى / إدارة WiFi نيابة عنك.</string>
+    <string name="battery_permission">الرجاء السماح للتطبيق بالوصول إلى البطارية بحيث يمكن للتطبيق معرفة حالة البطارية.</string>
+    <string name="record_audio_permission">يرجى السماح للتطبيق بتسجيل الصوت بحيث يمكن للتطبيق تسجيل وإرسال الصوت.</string>
+    <string name="pickup_address">عنوان الاستلام</string>
+    <string name="delivery_address">عنوان التسليم</string>
+    <string name="submit">تم \ ارسال</string>
+    <string name="comment_here">أكتب تعليقك هنا&#8230;&#8230;&#8230;</string>
+    <string name="signature">التوقيع</string>
+    <string name="cancelled">إلغاء</string>
+    <string name="msg_no_record_found">هذا السجل غير موجود</string>
+    <string name="reset_password">إعادة ضبط كلمة المرور</string>
+    <string name="enter_mobile_number">أدخل رقم الهاتف</string>
+    <string name="image">صورة</string>
+    <string name="continue_btn">استمر</string>
+    <string name="add_via_syber_pay_btn">إضافه عبر سايبر باي</string>
+    <string name="upload">تحميل</string>
+    <string name="save">حفظ</string>
+    <string name="uploaded_content_Images">تحميل صور الحمولة</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="done">تم</string>
+    <string name="skip">تخطى</string>
+    <string name="cancel">إلغاء</string>
+    <string name="switch_order">تبديل</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="txt_yes">نعم</string>
+    <string name="txt_no">لا</string>
+    <string name="emergency">الطوارئ</string>
+    <string name="ok">نعم</string>
+    <string name="select_date">حدد التاريخ</string>
+    <string name="first_name_mandatory"><sup>*</sup>الاسم الاول</string>
+    <string name="last_name_mandatory"><sup>*</sup>الكنية</string>
+    <string name="full_name_mandatory"><sup>*</sup>الإسم رباعي</string>
+    <string name="practice_from"><sup>*</sup>تاريخ البدء</string>
+    <string name="specialization"><sup>*</sup>التخصص</string>
+    <string name="clinic_name"><sup>*</sup>اسم العيادة</string>
+    <string name="appointment_date"><sup>*</sup>تاريخ الحجز</string>
+    <string name="appointment_kind"><sup>*</sup>نوع الحجز</string>
+    <string name="exam_name"><sup>*</sup>اسم الفحص</string>
+    <string name="exam_result"><sup>*</sup>نتيجه الفحص</string>
+    <string name="remove">مسح</string>
+    <string name="txt_allow">السماح</string>
+    <string name="no_internet_connection">لا يوجد اتصال بالإنترنت</string>
+    <string name="msg_add_signature">يرجى إضافة توقيعك.</string>
+    <string name="total_billing_amount">إجمالي مبلغ الفاتورة</string>
+    <string name="sign_out_msg">هل أنت متأكد أنك تريد الخروج؟</string>
+    <string name="request_sent_success">تم إرسال بنجاح</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="exit">خروج</string>
+    <string name="app_setting">إعدادات التطبيق</string>
+    <string name="share_text_before">مرحبًا ، اطلع على هذا التطبيق الرائع</string>
+    <string name="share_text_after">لطلب خدمة التوصيلdelivery.https: //play.google.com/store/apps/details؟ id =</string>
+    <string name="image_upload_title">اختر صورة ملفك الشخصي.</string>
+    <string name="pick_from_camera">اختر من الكاميرا.</string>
+    <string name="pick_from_gallery">اختر من المعرض.</string>
+    <string name="location_update_doze_mode">تحديث الموقع.</string>
+    <string name="select_time">اختر الوقت</string>
+    <string name="please_try_again">مشكلة في الاتصال ، يرجى المحاولة بعد قليل.</string>
+    <string name="driver_assign">طلب سائق جديد.</string>
+    <string name="header_booking_details">تفاصيل الحجز</string>
+    <string name="wallet">محفظة</string>
+    <string name="kg">كلغ</string>
+    <string name="cc">&#160;Cc</string>
+    <string name="payment_mode">طريقة الدفع</string>
+    <string name="promo_code">رمز التخفيض</string>
+    <string name="faqs">الأسئلة الشائعة والأجوبة</string>
+    <string name="header_register">تسجيل</string>
+    <string name="header_shipment_details">عرض تفاصيل الشحن</string>
+    <string name="empty_promo_code_err_msg">يرجى إدخال رمز التخفيض</string>
+    <string name="receiver_info">معلومات المستلم</string>
+    <string name="change_location">تغيير الموقع</string>
+    <string name="sender_info">معلومات المرسل</string>
+    <string name="send_from">المرسل</string>
+    <string name="send_to">المستلم</string>
+    <string name="header_track_shipment">متابعة مسار الشحنة</string>
+    <string name="header_rate_experience">قيّم تجربتك</string>
+    <string name="msg_enter_email">الرجاءا إدخال بريدك الإلكتروني.</string>
+    <string name="msg_valid_password">الرجاء إدخال كلمة السر.</string>
+    <string name="msg_invalid_first_name">الرجاء إدخال الاسم الأول.</string>
+    <string name="msg_invalid_last_name">رجاء قم بإدخال الاسم الاخير .</string>
+    <string name="msg_invalid_email">يرجى إدخال بريد إلكتروني ساري المفعول.</string>
+    <string name="msg_invalid_password_length">يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.</string>
+    <string name="msg_invalid_new_password_length">يجب أن تتكون كلمة المرور الجديدة من 8 أحرف على الأقل.</string>
+    <string name="msg_invalid_password">يرجى إدخال كلمة مرور صحيحة</string>
+    <string name="msg_invalid_mobile_length">يجب أن يكون رقم الهاتف المحمول 7 أرقام على الأقل.</string>
+    <string name="msg_enter_old_password">الرجاء إدخال كلمة المرور القديمة</string>
+    <string name="msg_mismatch_new_and_confirm">كلمة المرور الجديدة والتأكيد يجب أن يكونوا متطابقين.</string>
+    <string name="msg_enter_new_password">يرجى إدخال كلمة مرور جديدة</string>
+    <string name="msg_enter_confirm_password">الرجاء إدخال تأكيد كلمة المرور</string>
+    <string name="msg_otp_invalid">يرجى إدخال رمز تحقق ساري المفعول.</string>
+    <string name="click_back_again_exit">يرجى النقر مرة أخرى للخروج.</string>
+    <string name="header_select_country">حدد الدولة</string>
+    <string name="msg_warn_select_category">عذرا ، اختيار الفئة مقتصر على هذه الخيارات</string>
+    <string name="header_select_category">اختر الفئة</string>
+    <string name="menu_my_shipments">شحناتي</string>
+    <string name="active">متوفر</string>
+    <string name="past">المنتهي</string>
+    <string name="no_data_available">البيانات غير متوفرة</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="work">العمل</string>
+    <string name="report_emergency">تبليغ عن حالة طارئة</string>
+    <string name="cancel_booking">إلغاء الحجز</string>
+    <string name="menu_title_my_jobs">وظائفي</string>
+    <string name="msg_app_init_failed">فشلت تهيئة التطبيق. حاول مرة اخرى.</string>
+    <string name="please_wait">يرجى الانتظار…</string>
+    <string name="msg_warn_internet_fail_retry">فشل اتصال بالإنترنت. حاول مرة اخرى.</string>
+    <string name="warn_invalid_login">بيانات الدخول غيرصحيحة</string>
+    <string name="msg_session_expired">انتهت الجلسة. يرجى تسجيل الدخول مرة أخرى.</string>
+    <string name="location_permission_driver">يرجى السماح للتطبيق بالدخول إلى موقعك.</string>
+    <string name="fetching_location">جاري تحديد الموقع</string>
+    <string name="profile_update_successfully">تم تحديث الملف بنجاح.</string>
+    <string name="msg_location_not_found">الموقع غير موجود</string>
+    !-- Agent current
+    <string name="accept">قبول</string>
+    <string name="seconds">ثواني</string>
+    <string name="reject">رفض</string>
+    <string name="call_to">الاتصال</string>
+    <string name="shipment_rejection_confirmation_message">هل انت متأكد أتك تريد رفض هذه الشحنة؟</string>
+    <string name="sender">المرسل</string>
+    <string name="receiver">المستلم</string>
+    <string name="no_show">لا تظهر</string>
+    <string name="start_delivery">بدء التسليم</string>
+    <string name="resume">استأنف</string>
+    <string name="arrived">وصل</string>
+    <string name="arrived_first_destination">وصل الوجهة الأولى</string>
+    <string name="return_destination">رجوع</string>
+    <string name="reached_second_location">وصل الوجهه الثانيه</string>
+    <string name="delivered">تم التوصيل</string>
+    <string name="on_my_way">في الطريق</string>
+    <string name="pickup_time">زمن أخذ الحمولة</string>
+    <string name="fare_breakup">تفاصيل / تجزئة سعر التسليم</string>
+    <string name="call">إتصل</string>
+    <string name="acknowledge">الإقرار</string>
+    <string name="price_not_specified">السعر لم يحدد بعد</string>
+    <string name="select_reason_emergency">الرجاء تحديد سبب الإبلاغ عن حالة طوارئ</string>
+    <!-- Tutorial -->
+    <string name="sign_up">إنشاء حساب</string>
+    <string name="skip_now">تخطي الآن</string>
+    <string name="seamless_booking">إحجز بسهولة</string>
+    <string name="welcome_slide_one_intro">احجز خدمة التوصيل من الباب الى الباب في بضع خطوات بسيطة.</string>
+    <string name="realtime_tracking">تتبع لحظي</string>
+    <string name="welcome_slide_two_intro">تحقق من الوقت الفعلي للتسليم على الخريطة.</string>
+    <string name="online_payments">الدفع الإلكتروني</string>
+    <string name="welcome_slide_three_intro">ادفع قيمة عمليات التسليم بأمان من داخل التطبيق نفسه.</string>
+    <!-- Select Country-->
+    <string name="hint_search_country">بحث عن بلد</string>
+    <!-- Select Category-->
+    <string name="hint_search_category">بحث عن فئة</string>
+    <!-- Login -->
+    <string name="welcome_back">أهلا بك من جديد</string>
+    <string name="hello">أهلا,</string>
+    <string name="stay_at_home">خليك بالبيت!</string>
+    <string name="how_can_we_help_u">كيف لنا أن نخدمك؟</string>
+    <string name="home_content">الآن يمكنك فحص صحتك من منزلك و المتابعه مع طبيبك.</string>
+    <string name="enter_mobile_and_password">أدخل رقم هاتفك وكلمة المرور</string>
+    <string name="enter_password">أدخل كلمة المرور</string>
+    <string name="forgot_password">هل نسيت كلمة المرور</string>
+    <string name="forgot_password_question">هل نسيت كلمة المرور؟</string>
+    <string name="do_not_have_account">ليس لديك حساب؟</string>
+    <string name="register_here">تسجيل</string>
+    <string name="register">تسجيل</string>
+    <string name="create_an_account">تسجيل n\ حساب جديد</string>
+    <string name="or">أو</string>
+    <string name="version">النسخة</string>
+    <string name="password_mandatory"><supp>*</supp>كلمه السر</string>
+    <string name="already_have_account">هل لديك حساب مسجل مسبقا؟</string>
+    <!-- Signature -->
+    <string name="hint_sign_here">الرجاء تسجيل الدخول هنا</string>
+    <!-- Forgot Password-->
+    <string name="mobile_number_to_get_password">أدخل رقم الهاتف للحصول على كلمة مرور جديدة</string>
+    <!-- Change Password -->
+    <string name="old_password">كلمة المرور القديمة</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
+    <string name="confirm_new_password">تأكيد كلمة المرور الجديدة</string>
+    <!-- Registration -->
+    <string name="setup_account">إعداد حساب</string>
+    <string name="title_personal_information">أدخل معلوماتك الشخصية</string>
+    <string name="register_account">تسجيل حساب</string>
+    <string name="get_started">إبدأ</string>
+    <string name="create_account_mobile_number">إنشاء حساب برقم هاتفك المحمول</string>
+    <string name="enter_otp">أدخل رمز التحقق</string>
+    <string name="resend">إعادة إرسال</string>
+    <string name="verify_continue">تحقق ومتابعة</string>
+    <string name="send_otp">أرسل رمز التحقق</string>
+    <!-- Customer Home -->
+    <string name="hint_pickup_address">عنوان الاستلام</string>
+    <string name="hint_delivery_address">عنوان التسليم</string>
+    <!-- Customer Delivery Location Selection -->
+    <!-- Booking Details -->
+    <string name="select_package_category">حدد فئة الحمولة</string>
+    <string name="package_weight">وزن الحمولة</string>
+    <string name="zero">0</string>
+    <string name="max_weight_value">100 كجم</string>
+    <string name="sender_receiver_information">معلومات المرسل والمستلم</string>
+    <string name="change">تغيير</string>
+    <string name="apply_promo_code">إستخدام رمز التخفيض</string>
+    <string name="estimated_value_package">القيمة المقدرة للحمولة</string>
+    <string name="hint_package_value">على سبيل المثال. 45</string>
+    <string name="add_notes">إضافة ملاحظات</string>
+    <string name="note_for_pickup_delivery">أي ملاحظات عند الإستلام/ التسليم</string>
+    <string name="upload_content_Images">تحميل صور المحتوى</string>
+    <string name="send_request">ارسل الطلب</string>
+    <string name="confirm_request">تأكيد الطلب</string>
+    <string name="msg_cancel_buyme_item">هل أنت متأكد, اتريد حذف هذا العنصر؟</string>
+    <string name="msg_cancel_buyme_booking">هل أنت متأكد, اتريد حذف هذا الحجز؟</string>
+    <string name="one_way">اتجاه واحد</string>
+    <string name="round_trip">ذهابا و ايابا</string>
+    <string name="buyme_round_trip">ادفع لي ذهابا و ايابا</string>
+
+    <!-- Sender / Receiver Information -->
+    <string name="house_desc">رقم المنزل / الشقة</string>
+    <string name="landmark">معلم معروف</string>
+    <string name="contact_name">اسم شخص المسؤول</string>
+    <string name="amount">المبلغ*</string>
+    <string name="contact_number"><sup>*</sup>رقم الشخص المسؤول</string>
+    <string name="any_notes_you_want_to_add">أي ملاحظات تريد إضافتها</string>
+    <string name="msg_invalid_house_flat">رقم المنزل / الشقة غير صالح.</string>
+    <string name="msg_empty_vehicle_type">الرجاء اختيار نوع المركبة</string>
+    <string name="msg_empty_sender_receiver">الرجاء تحديد معلومات المرسل و المستقبل</string>
+    <string name="msg_empty_payment_mode">الرجاء اختيار طريقة الدفع</string>
+    <string name="msg_empty_order_amount">الرجاء تحديد قيمة الطلب الفعلية</string>
+    <string name="search_vehicle_type">بحث نوع المركبة</string>
+    <string name="verify">تاكيد</string>
+    <string name="sender_receiver_info">معلومات المرسل و المستقبل</string>
+    <string name="what_can_we_get_you">ماذا يمكننا ان نجلب لك؟</string>
+
+
+    <!-- Promocode -->
+    <string name="promo_code_instruction">اذا كان لديك رمز تخفيض قم بإدخاله، واحصل على x خصم من القيمة.</string>
+    <string name="enter_promo_code">إدخال رمز التخفيض</string>
+    <string name="apply">تطبيق</string>
+    <string name="available_coupons">الكوبونات المتاحة</string>
+    <string name="msg_wrong_promo_code">الرجاء إدخال رمز تخفيض صحيح</string>
+    <!-- Payment mode -->
+    <string name="cash_on_delivery">الدفع عند الاستلام</string>
+    <string name="net_banking">الدفع الالكتروني</string>
+    <string name="paid">المدفوع</string>
+    <!-- Shipment Details -->
+    <string name="approx_fare_estimate">تقدير تقريبي للأجرة</string>
+    <string name="track_order">متابعة المسار</string>
+    <!-- Invoice -->
+    <string name="delivery_cost">تكلفة التوصيل</string>
+    <string name="delivery_time">موعد التسليم</string>
+    <string name="package_category">فئة الحمولة</string>
+    <string name="package_service">باكج</string>
+    <string name="service_type">نوع الخدمة: </string>
+    <string name="weight">الوزن</string>
+    <string name="bill_details">تفاصيل الفاتورة</string>
+    <string name="total">المجموع</string>
+    <string name="payment_method">طريقة الدفع او السداد</string>
+    <string name="rate_experience">قيّم تجربتك</string>
+    <string name="email_invoice">ارسال الفاتورة الى البريد الإلكتروني</string>
+    <string name="msg_plz_rate_experience">يرجى تقييم تجربتك</string>
+    <string name="cancelled_by">تم الإلغاء بواسطة</string>
+    <string name="cancellation_reason">سبب الإلغاء</string>
+    <string name="cancellation_note">ملاحظة توضح سبب الإلغاء</string>
+    <string name="you">أنت</string>
+    <!-- Track Shipment -->
+    <string name="shipment_no">رقم الشحنة</string>
+    <string name="view_shipment_summary">عرض ملخص الشحنة</string>
+    <!-- Rate Experience -->
+    <string name="What_did_you_like">ما الذي أعجبك؟</string>
+    <string name="additional_comments">تعليقات اضافية</string>
+    <string name="anything_else_would_like_tell">أي شيء آخر ترغب في إخبارنا به …</string>
+    <!-- My Shipment -->
+    <string name="track">متابعة</string>
+    <string name="view_details">عرض التفاصيل</string>
+    <!-- My Profile -->
+    <string name="enter_email_id">أدخل البريد الإلكتروني</string>
+    <string name="edit">تعديل</string>
+    <!-- Payment -->
+    <string name="payment">الدفع</string>
+    <string name="make_payment">قم بالدفع</string>
+    <!-- Help & Legal -->
+    <string name="faq">الأسئلة الشائعة والأجوبة</string>
+    <string name="copyright">حقوق النشر</string>
+    <string name="tnc">الشروط والأحكام</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+    <string name="help">مساعدة</string>
+    <string name="legal">القانون</string>
+    <string name="support">الدعم</string>
+    <string name="all">الكل</string>
+    <!-- Settings -->
+    <string name="about_us">من نحن</string>
+    <string name="rate_us">قيم التطبيق</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="change_password">تغيير كلمة السر</string>
+    <string name="push_notification">الضغط على الإشعارات</string>
+    <string name="fav_location">المواقع المفضلة</string>
+    <!-- Support -->
+    <string name="address">العنوان</string>
+    <string name="fax">الفاكس</string>
+    <!-- Invite Friend -->
+    <string name="earn_discount">احصل على تخفيض</string>
+    <string name="referral_content">قم بدعوة صديق واحصل على %1$s وسيحصل صديقك على %2$s دولارًا</string>
+    <string name="referral_code">رمز التخفيض</string>
+    <string name="invite_friend">دعوة صديق</string>
+    <!-- Agent Online -->
+    <string name="whoops">اووووبس</string>
+    <string name="msg_no_shipment_request">لا يوجد طلب شحنة من فضلك نأكد من إتصالك بالانترنت للحصول على طلبات جديدة.</string>
+    <!-- Agent Offline -->
+    <string name="msg_go_online">"يرجى تحويل وضعك الى ""متوفر"" لتلقي طلب الشحن."</string>
+    <string name="go_online">الظهور كمتصل</string>
+    <!-- Agent Report Emergency -->
+    <string name="select_reason">اختر السبب</string>
+    <string name="leave_comment">اترك تعليقا</string>
+    <string name="take_pic">إلتقط صورة</string>
+    <!-- Package -->
+    <string name="delivery_24_7">التوصيل متوفر 24\7</string>
+    <!-- Restaurant -->
+    <string name="food">طعام</string>
+    <!-- Web View -->
+    <!-- Favourite Location -->
+    <string name="fav_nickname">أدخل اسم مستعار للموقع</string>
+    <string name="msg_alert_nickname">الرجاء إدخال الاسم المستعار.</string>
+    <string name="msg_alert">تنبيه!</string>
+    <!-- Cancel Booking -->
+    <string name="cancellation_charge_instruction">قد يتم فرض رسوم إذا قمت بالإلغاء بعد 5 دقائق. هل أنت متأكد من أنك تريد إلغاء.</string>
+    <!-- API version check-->
+    <string name="update_now">التحديث الان</string>
+    <string name="later">لاحقا</string>
+    <!-- Chat Screen-->
+    <string name="no_users_found">لم يتم العثور على المستخدمين</string>
+    <string name="chat_with">دردش مع</string>
+    <string name="type_something_here">اكتب شيئا هنا ..</string>
+    <string name="send">أرسل</string>
+    <!-- Broadcast Shipment-->
+    <string name="new_shipment_request">لديك طلب شحن جديد.</string>
+    <string name="new_booking_available">حجز جديد متوفر.</string>
+    <string name="new_booking">حجز جديد</string>
+
+    <!--Extra string-->
+    <string name="rate_n_comment">معدل والتعليق</string>
+    <string name="email_mandatory">البريد الالكتروني</string>
+    <string name="mobile_number"><sup>*</sup>رقم الهاتف</string>
+    <string name="mobile_number_mandatory">رقم الهاتف *</string>
+    <string name="agent_online_doze_mode">وكيل التسليم متوفر</string>
+    <string name="msg_match_new_and_old"> كلمة المرور القديمة وكلمة المرور الجديدة يجب أن تكون مختلفة.</string>
+    <string name="msg_empty_person_contact">ادخل رقم الشخص المسؤول</string>
+    <string name="msg_empty_mobile_number">الرجاء إدخال رقم الهاتف</string>
+    <string name="msg_empty_password">الرجاء إدخال كلمة المرور</string>
+    <string name="msg_only_digit_not_allowed">الارقام غير مسموح بها في اسم الشخص</string>
+    <string name="title_select_location_delivery">موقع التسليم</string>
+    <string name="title_select_location_pickup">موقع استلام الشحنة</string>
+    <string name="title_cash_on_the_second_round_arrival">الدفع عند الوصول الى الوجهه الأخيره</string>
+    <string name="connect_with_fb">تسجيل الدخول مع عن طريق حسابك في فيسبوك</string>
+    <string name="sign_in_with_google">تسجيل الدخول مع  عن طريق حسابك في جوجل</string>
+    <string name="verify_otp">التأكد من رمز التحقق</string>
+    <string name="unknown_phone_country_code_otp_Id">رقم الهاتف أو رمز البلد أو رمز التحقق غير معروف</string>
+    <string name="location_mandatory">الموقع</string>
+    <string name="booking_id_empty">رقم تعريف الحجز فارغ</string>
+    <string name="chase">متابعة</string>
+    <string name="mobile_not_verified">رقم الهاتف غير صالح</string>
+    <string name="mobile_verified">تم التحقق من رقم الهاتف</string>
+    <string name="email_not_verified">عنوان البريد الإلكتروني غير صالح</string>
+    <string name="email_verified">تم التحقق من عنوان البريد الإلكتروني</string>
+    <string name="wallet_available_balance">الرصيد المتوفر</string>
+    <string name="transaction_history">سجل المعاملات</string>
+    <string name="manage_my_credit">إداره رصيدي</string>
+    <string name="view_all">عرض الكل</string>
+    <string name="add_credit">إضافة رصيد</string>
+    <string name="send_credit">إرسال رصيد</string>
+    <string name="all_transactions">جميع المعاملات</string>
+
+
+    <string name="delete_fav_location">هل أنت متأكد أنك تريد حذف العنوان؟</string>
+    <string name="push_notification_status">تم تغيير حالة الإخطار بنجاح</string>
+    <string name="bytes">بايت</string>
+    <string name="kb">كيلوبايت</string>
+    <string name="mb">ميجابايت</string>
+    <string name="media_upload">تحميل وسائط الدردشة في تقدم</string>
+    <string name="chat_media_upload_error">فشل تحميل ملف وسائط الدردشة.</string>
+    <string name="record">سجل</string>
+    <string name="stop">توقف</string>
+    <string name="date_time_between">يمكنك الحجز فقط بين الدقائق والوقت الأقصى.</string>
+    <string name="min_time">الدقائق</string>
+    <string name="max_time">الوقت الأقصى</string>
+    <string name="you_cant_logout_shipment">لا يمكنك تسجيل الخروج لأن لديك وظيفة مستمرة.</string>
+
+    <string name="cash_collection_confirmation">هل انت متأكد أنك استلمت المبلغ؟  </string>
+
+    <string name="cash_not_collected">النقدية لم يتم جمعها</string>
+    <string name="txt_enter_otp_code">ادخل رمز التحقق</string>
+    <string name="txt_enter_four_digit_code">أدخل الرمز المكون من 4 ارقام</string>
+    <string name="txt_did_not_receive_otp"> لم تستلم رمز التحقق؟</string>
+    <string name="cash_collection">استلام النقود</string>
+    <!-- My Transactions -->
+
+    <string name="daily">يومي</string>
+    <string name="weekly">اسبوعي</string>
+    <string name="monthly">شهري</string>
+    <string name="trips">الرحلات</string>
+    <string name="earning">المستحق</string>
+    <string name="average">المتوسط</string>
+    <string name="select_year">اختر سنة</string>
+    <string name="search">بحث</string>
+
+    <!-- Refer friend-->
+    <string name="invite_friends">ادعو أصدقاء</string>
+    <string name="refer_earn">الرجوع وكسب</string>
+    <string name="refer_earn_message">Haven\'t tried %1$s yet? Sign up with my code %2$s and earn %3$s %4$d
+        \nDownload: https://play.google.com/store/apps/details?id=%5$s</string>
+    <string name="package_value">قيمة الحزمة المقدرة</string>
+
+    <string name="payment_success">تم الدفع بنجاح</string>
+    <string name="pay">دفع</string>
+    <string name="msg_additional_fare"> حسب العنوان المحدث ، يرجى دفع المبلغ المستحق %1$s</string>
+    <string name="cancellation_charges">رسوم الإلغاء</string>
+    <string name="payment_status">حالة السداد</string>
+    <string name="admin">مشرف</string>
+    <string name="msg_invalid_estimated_package_value">القيمة المقدرة للحمولة</string>
+
+    <string name="select_vehicle_type">اختر نوع المركبة </string>
+    <string name="select_vehicle">اختر المركبة</string>
+    <string name="exact_order_amount">تحديد قيمة الطلب الفعلية</string>
+
+    <string name="select_pickup_location">يرجى اختيار موقع استلام الشحنة</string>
+    <string name="select_delivery_location">يرجى تحديد موقع التسليم</string>
+
+    <string name="home_send_receive">إرسال / استقبال</string>
+    <string name="buy_me">إدفع لي</string>
+    <string name="send_receive">إرسال / استقبال</string>
+    <string name="buy_me_express">اشتريني +</string>
+    <string name="add_appointment">إضافه حجز</string>
+    <string name="add_medical">إضافة تقرير طبي</string>
+    <string name="buy_me_add_item">إضافة عناصر</string>
+    <string name="view_status">عرض الحالة</string>
+    <string name="buyme_send_request_successful">تم إرسال طلبك بنجاح وسنعاود الاتصال بك قريبًا</string>
+    <string name="upload_image">تحميل الصور</string>
+    <string name="proceed">تقدم</string>
+    <string name="receiver_location">موقع المتلقي</string>
+    <string name="note_buy_me">ملحوظة</string>
+    <string name="item_name">اسم العنصر</string>
+    <string name="item_description_quantity">اسم العنصر و الوصف و الكمية</string>
+    <string name="itemName_placeholder">مثال: 1 كيلو سمك هامور</string>
+    <string name="Note_placeholder">مثال: من مطعم سمكنا</string>
+    <string name="not_available">غير متوفر</string>
+    <string name="order_name">طلبية</string>
+    <string name="Item_description">وصف السلعة</string>
+    <string name="msg_item_name_empty">الرجاء تعبئة اسم العنصر</string>
+    <string name="msg_name_empty">الرجاء تعبئة اسم العنصر</string>
+    <string name="delivery_info">معلومات التوصيل</string>
+    <string name="deliver_to">يسلم إلى :</string>
+    <string name="msg_item_quantity">الرجاء إدخال كمية العنصر</string>
+    <string name="msg_item_name">الرجاء إدخال اسم العنصر</string>
+    <string name="msg_item_description" type="id">الرجاء ادخال الوصف</string>
+    <string name="mark_all_read">اقرأ الكل</string>
+    <string name="all_notification_read">تم وضع علامة "مقروءة" على كافة الإخطارات</string>
+    <string name="no_notifications">لا توجد إخطارات</string>
+    <string name="buyme_payment_method">طريقة الدفع أو السداد :</string>
+    <string name="images">الصور</string>
+
+    <string name="msg_item_add">الرجاء اضافة عنصر واحد على الاقل</string>
+
+    <string name="btn_accept">قبول</string>
+    <string name="btn_reject">رفض</string>
+
+    <string name="acceptsucces">تم القبول بنجاح</string>
+    <string name="syberpay">"سايبر باي "</string>
+    <string name="price">السعر</string>
+    <string name="currency">جنية</string>
+
+    <string name="total_of_order">المبلع الكلي</string>
+    <string name="delivery_fees">تكلفة التوصيل</string>
+    <string name="goods_estimate_value">تكلفة البضائع</string>
+    <string name="base_fare">تكلفة التوصيل</string>
+    <string name="confirm_pickup_btn">تأكيد موقع الاستلام</string>
+    <string name="confirm_dropof_btn">تأكيد موقع التسليم</string>
+    <string name="vechicle_type_motor">موتور</string>
+    <string name="vechicle_type_motorcycle">دراجة نارية</string>
+    <string name="vechicle_type_van">شاحنة</string>
+    <string name="vechicle_type_truck">شاحنة</string>
+    <string name="vechicle_type_tuktuk">رقشة</string>
+    <string name="vechicle_type_car">سيارة</string>
+
+
+    <!--StateProgressBar-->
+    <string name="check_icon">&#xf00c;</string>
+
+</resources>

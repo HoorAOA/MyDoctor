@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/white" android:drawable="@drawable/shape_rating_button_selected" android:state_selected="true" />
+    <item android:color="@color/text_input_hint_color" android:drawable="@drawable/shape_rating_button_not_selected" android:state_selected="false" />
+    <item android:color="@color/text_input_hint_color" android:drawable="@drawable/shape_rating_button_not_selected" />
+
+
+</selector>

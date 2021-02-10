@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_300"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/shape_rounded_rect_corner"
+    android:elevation="@dimen/dp_5">
+
+    <TextView
+        android:id="@+id/txt_common_msg"
+        style="@style/MediumRegularBlackTextViewStyle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textAlignment="viewStart"
+        android:textDirection="locale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_cancel"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/light_grey_color"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="@id/btn_cancel"
+        app:layout_constraintStart_toStartOf="@id/btn_cancel" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        style="@style/SmallBoldNegativeButtonRoundRectangleStyle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/btn_okay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_okay" />
+
+    <Button
+        android:id="@+id/btn_okay"
+        style="@style/SmallRegularRoundedButtonStyle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/ok"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/txt_common_msg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

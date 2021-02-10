@@ -1,0 +1,131 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.mydoctor.customer"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            debuggable true
+            jniDebuggable true
+            zipAlignEnabled false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "android"
+    productFlavors {
+
+        doctor {
+            dimension "android"
+            versionCode Integer.parseInt(doctorVersionCodeApp)
+            versionName doctorVersionNameApp
+            applicationId doctorApplicationID
+            buildConfigField "String", "BASE_URL", "\"${devBaseURL}\""
+            buildConfigField "String", "USER_ROLE", "\"${doctorRole}\""
+            resValue "string", "app_name", "\"${doctorApp}\""
+            manifestPlaceholders = [
+                    appIcon     : "@mipmap/ic_doctor_launcher",
+                    roundAppIcon: "@mipmap/ic_doctor_launcher_round"
+            ]
+
+        }
+
+        patient {
+            dimension "android"
+            versionCode Integer.parseInt(patientVersionCodeApp)
+            versionName patientVersionNameApp
+            applicationId patientApplicationID
+            buildConfigField "String", "BASE_URL", "\"${devBaseURL}\""
+            buildConfigField "String", "USER_ROLE", "\"${patientRole}\""
+            resValue "string", "app_name", "\"${patientApp}\""
+            manifestPlaceholders = [
+                    appIcon     : "@mipmap/ic_patient_launcher",
+                    roundAppIcon: "@mipmap/ic_patient_launcher_round"
+            ]
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+ext {
+    //Butterknife
+    butterKnifeVersion = '10.1.0'
+    //SqlCipher
+    sqlCipherVersion = '4.0.1'
+    //Image Cropper
+    cropperVersion = '2.8.0'
+    //glide
+    glideVersion = '4.9.0'
+    //circleImageView
+    circelImageViewVersion = '3.0.0'
+    //Retrofit / gson
+    retrofitVersion = '2.3.0'
+    rxJavaVersion = '2.1.4'
+    rxAndroidVersion = '2.1.1'
+    gsonVersion = '2.8.1'
+
+    //Okhttp Logging
+    okhttpVersion = '3.13.1'
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Butter Knife Version
+    implementation "com.jakewharton:butterknife:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+
+    //Sql Cipher
+    implementation "net.zetetic:android-database-sqlcipher:$sqlCipherVersion"
+
+    //Cropper
+    implementation "com.theartofdev.edmodo:android-image-cropper:$cropperVersion"
+
+    //Image loading
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+    implementation "de.hdodenhof:circleimageview:$circelImageViewVersion"
+
+    //Gson Parsing
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    //Okhttp3
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+
+}

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appbar_main"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigation_bar_height"
+    android:background="@color/transparent_color"
+    android:fitsSystemWindows="true"
+    app:elevation="@dimen/dp_0">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigation_bar_height"
+        android:background="@drawable/toolbar_divider"
+        android:contentInsetStart="@dimen/dp_0"
+        android:contentInsetLeft="@dimen/dp_0"
+        android:contentInsetEnd="@dimen/dp_0"
+        android:contentInsetRight="@dimen/dp_0"
+        app:contentInsetEnd="@dimen/dp_0"
+        app:contentInsetLeft="@dimen/dp_0"
+        app:contentInsetRight="@dimen/dp_0"
+        app:contentInsetStart="@dimen/dp_0"
+        app:elevation="@dimen/dp_0"
+        app:layout_collapseMode="pin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ibtn_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_15"
+                android:scaleType="center"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/transparent_color"
+                app:srcCompat="@drawable/back_arrow"
+                android:layout_marginStart="@dimen/dp_15"/>
+
+            <ImageView
+                android:id="@+id/img_app_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:gravity="center"
+                android:src="@mipmap/ic_patient_launcher"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txt_header"
+                style="@style/LargeBoldSecondaryColorTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:letterSpacing="0.02"
+                android:padding="@dimen/dp_10"
+                android:textAlignment="viewStart"
+                android:textDirection="locale"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_notification_bell"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/dp_10"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_done"
+                style="@style/MediumBoldSecondaryTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/dp_10"
+                android:text="@string/done"
+                android:textAlignment="viewStart"
+                android:textColor="@color/tertiary_color"
+                android:textDirection="locale"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_skip"
+                style="@style/MediumBoldSecondaryTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/dp_10"
+                android:text="@string/skip"
+                android:textAlignment="viewStart"
+                android:textColor="@color/tertiary_color"
+                android:textDirection="locale"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/txt_mark_all_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:background="?attr/selectableItemBackground"
+                android:padding="@dimen/dp_10"
+                android:text="@string/mark_all_read"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

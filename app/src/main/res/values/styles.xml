@@ -1,0 +1,953 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/accent_color</item>
+        <item name="colorAccent">@color/accent_color</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.App.Caption</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="CropperTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/accent_color</item>
+        <item name="colorPrimaryDark">@color/accent_color</item>
+        <item name="colorAccent">@color/accent_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <declare-styleable name="EditTextWithErrorView">
+        <attr name="hint" format="string" />
+        <attr name="error_text" format="string" />
+        <attr name="show_error_label" format="boolean" />
+        <attr name="android:inputType" />
+
+    </declare-styleable>
+
+
+    <!--Semi Bold Rating button rectangle style-->
+    <style name="SemiBoldButtonRectangle" parent="AppTheme">
+        <item name="android:background">@drawable/rating_button_rectangle_selector</item>
+        <item name="android:textColor">@drawable/rating_button_text_color_selector</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="SmallSemiBoldRectangleStyle" parent="SemiBoldButtonRectangle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <!--Semi Bold FAQ button rectangle style-->
+    <style name="SemiBoldFaqButtonRectangle" parent="AppTheme">
+        <item name="android:background">@drawable/faq_button_rectangle_selector</item>
+        <item name="android:textColor">@drawable/faq_button_text_color_selector</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="SmallSemiBoldFaqRectangleStyle" parent="SemiBoldFaqButtonRectangle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <!--Semi Bold FAQ button circle style-->
+
+    <style name="SemiBoldFaqButtonCircle" parent="AppTheme">
+<!--        <item name="android:background">@drawable/last_booking_circular_selector</item>-->
+        <item name="android:textColor">@color/accent_color</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+    <!--  sender and receiver last booking  -->
+    <style name="SmallSemiBoldFaqCircularStyle" parent="SemiBoldFaqButtonCircle">
+        <item name="android:textSize">@dimen/dp_12</item>
+    </style>
+
+    <!--Bold button rectangle style-->
+    <style name="BoldButtonRectangleStyle" parent="AppTheme">
+<!--        <item name="android:background">@drawable/shape_square_selector</item>-->
+        <item name="android:textColor">@color/selector_common_btn_txt_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="BoldButtonLeftTabRectangleStyle" parent="AppTheme">
+<!--        <item name="android:background">@drawable/shape_tab_left_selector</item>-->
+        <item name="android:textColor">@color/selector_common_btn_txt_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="BoldButtonRightTabRectangleStyle" parent="AppTheme">
+<!--        <item name="android:background">@drawable/shape_tab_right_selector</item>-->
+<!--        <item name="android:textColor">@color/selector_common_btn_txt_color</item>-->
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="ViewStatusButton" parent="AppTheme">
+<!--        <item name="android:background">@drawable/shape_square_selector</item>-->
+        <item name="android:textColor">@color/selector_common_btn_txt_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="MediumBoldButtonRectangleStyle" parent="BoldButtonRectangleStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="LargeBoldButtonRectangleStyle" parent="BoldButtonRectangleStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="SmallBoldButtonRectangleStyle" parent="BoldButtonRectangleStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="LargeBoldLeftTabButtonRectangleStyle" parent="BoldButtonLeftTabRectangleStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="LargeBoldRightTabButtonRectangleStyle" parent="BoldButtonRightTabRectangleStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <!--Bold button rounded style-->
+    <style name="BoldButtonRoundedStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+<!--        <item name="android:background">@drawable/shape_rounded_button_selector</item>-->
+        <item name="android:textColor">@color/selector_common_btn_txt_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="LargeBoldButtonRoundedStyle" parent="BoldButtonRoundedStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+
+    <!--Bold button rounded style-->
+    <style name="BoldButtonEmergencyRounded" parent="AppTheme">
+<!--        <item name="android:background">@drawable/emergency_rounded_button_selector</item>-->
+        <item name="android:textColor">@color/selector_common_btn_txt_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="SmallBoldEmergencyButtonStyle" parent="BoldButtonEmergencyRounded">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <!-- Regular button style-->
+
+    <!--Semi Bold negative button rectangle style-->
+    <style name="SemiBoldNegativeButtonRectangle" parent="@style/Widget.AppCompat.Button.Borderless">
+<!--        <item name="android:background">@drawable/negative_button_rectangle_selector</item>-->
+        <item name="android:textColor">@color/icon_fill_color</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <!--Semi Bold negative button rectangle with round corners style-->
+    <style name="SemiBoldNegativeButtonRectangleRound" parent="@style/Widget.AppCompat.Button.Borderless">
+<!--        <item name="android:background">@drawable/negative_button_rectangle_selector</item>-->
+        <item name="android:textColor">@color/icon_fill_color</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <!--Bold negative button rectangle style-->
+    <style name="BoldNegativeButtonRectangle" parent="@style/Widget.AppCompat.Button.Borderless">
+<!--        <item name="android:background">@drawable/negative_button_rectangle_selector</item>-->
+        <item name="android:textColor">@color/icon_fill_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <!--Bold negative button rectangle style-->
+    <style name="BoldNegativeButtonRoundRectangle" parent="@style/Widget.AppCompat.Button.Borderless">
+<!--        <item name="android:background">@drawable/negative_button_rectangle_round_selector</item>-->
+        <item name="android:textColor">@color/icon_fill_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="SmallBoldNegativeButtonRectangleStyle" parent="SemiBoldNegativeButtonRectangle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="SmallBoldNegativeButtonRectangleRoundStyle" parent="SemiBoldNegativeButtonRectangleRound">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="MediumBoldNegativeButtonRectangleStyle" parent="BoldNegativeButtonRectangle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="LargeBoldNegativeButtonRectangleStyle" parent="BoldNegativeButtonRectangle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="LargeBoldNegativeButtonRectangleRoundStyle" parent="BoldNegativeButtonRoundRectangle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!-- Bold black text style-->
+    <style name="BoldSecondaryTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="BoldAccentTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/accent_color</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="SmallBoldSecondaryTextViewStyle" parent="BoldSecondaryTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="MediumBoldSecondaryTextViewStyle" parent="BoldSecondaryTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="LargeBoldSecondaryTextViewStyle" parent="BoldSecondaryTextViewStyle">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="ExtraLargeBoldSecondaryTextViewStyle" parent="BoldSecondaryTextViewStyle">
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <style name="HomeTextSelectionStyle" parent="BoldAccentTextViewStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+    <!-- elmessiri medium black text style-->
+    <style name="MediumGrayTextViewStyle" parent="AppTheme">
+        <item name="android:textColor">@color/text_input_activated_color</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+
+    <style name="MediumMediumGrayTextViewStyle" parent="MediumGrayTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!-- elmessiri medium secondary dark text style-->
+    <style name="MediumSecDarkTextViewStyle" parent="AppTheme">
+        <item name="android:textColor">@color/secondary_dark_color</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+
+    <style name="MediumMediumSecDarkTextViewStyle" parent="MediumSecDarkTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!-- Regular black text style-->
+    <style name="RegularBlackTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+
+    <style name="SmallRegularBlackTextViewStyle" parent="RegularBlackTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="MediumRegularBlackTextViewStyle" parent="RegularBlackTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!-- Secondary dark text style-->
+    <style name="RegularDarkSecTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/secondary_dark_color</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="TinyRegularDarkSecTextViewStyle" parent="RegularDarkSecTextViewStyle">
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="SmallRegularDarkSecTextViewStyle" parent="RegularDarkSecTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="MediumRegularDarkSecTextViewStyle" parent="RegularDarkSecTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+
+    <!-- Regular Grey text style-->
+    <style name="RegularGreyTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/text_input_activated_color</item>
+        <item name="android:textColorHint">@color/text_input_hint_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="TinyGreyTextViewStyle" parent="RegularGreyTextViewStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="SmallRegularGreyTextViewStyle" parent="RegularGreyTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="MediumRegularGreyTextViewStyle" parent="RegularGreyTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+
+    <!-- Bold Grey text style-->
+    <style name="BoldGreyTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/text_input_hint_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="SmallBoldGreyTextViewStyle" parent="BoldGreyTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <!-- Bold Primary text style-->
+    <style name="BoldPrimaryTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="ExtraLargeBoldPrimaryTextViewStyle" parent="BoldPrimaryTextViewStyle">
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <style name="MediumBoldPrimaryTextViewStyle" parent="BoldPrimaryTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!-- Regular White text style-->
+    <style name="RegularWhiteTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="TinyegularWhiteTextViewStyle" parent="RegularWhiteTextViewStyle">
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="MediumRegularWhiteTextViewStyle" parent="RegularWhiteTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="MediumWhiteBoldColorTextViewStyle" parent="WhiteBoldColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="XXLargeRegularWhiteTextViewStyle" parent="RegularWhiteTextViewStyle">
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+    <!-- Regular black Edit text style-->
+    <style name="RegularSecondaryEditTextStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+<!--        <item name="android:textCursorDrawable">@drawable/shape_cursor_edit_text</item>-->
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="MediumRegularSecondaryEditTextStyle" parent="RegularSecondaryEditTextStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+
+    <!-- Regular White Edit text style-->
+
+
+    <!-- Regular Primary text color text style-->
+    <style name="RegularPrimaryColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <!-- Bold Primary text color text style-->
+    <style name="BoldPrimaryColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="MediumBoldPrimaryColorTextViewStyle" parent="BoldPrimaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="LargeBoldPrimaryColorTextViewStyle" parent="BoldPrimaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="VeryLargeBoldPrimaryColorTextViewStyle" parent="BoldPrimaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_30</item>
+    </style>
+
+
+    <!-- Regular Secondary text color text style-->
+    <style name="RegularSecondaryColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="SmallRegularSecondaryColorTextViewStyle" parent="RegularSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="MediumRegularSecondaryColorTextViewStyle" parent="RegularSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="LargeRegularSecondaryColorTextViewStyle" parent="RegularSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <!-- Bold Secondary text color text style-->
+    <style name="BoldSecondaryColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColorHint">@color/secondary_color</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="UltraSmallBoldSecondaryColorTextViewStyle" parent="BoldSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="SmallBoldSecondaryColorTextViewStyle" parent="BoldSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="MediumBoldSecondaryColorTextViewStyle" parent="BoldSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="LargeBoldSecondaryColorTextViewStyle" parent="BoldSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="ExtraLargeBoldSecondaryColorTextViewStyle" parent="BoldSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <style name="XXLargeBoldSecondaryColorTextViewStyle" parent="BoldSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_30</item>
+    </style>
+
+
+    <!-- Bold Secondary dark text color text style-->
+
+
+    <!-- Light Secondary text color text style-->
+    <style name="LightSecondaryColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="XSmallLightSecondaryColorTextViewStyle" parent="LightSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="MediumLightSecondaryColorTextViewStyle" parent="LightSecondaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="RequestSendMediumLightSecondaryColorTextViewStyle" parent="LightSecondaryColorTextViewStyle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- Light Gray text color text style-->
+    <style name="LightGrayColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/text_input_activated_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="SmallLightGrayColorTextViewStyle" parent="LightGrayColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="ExtraLightGrayColorTextViewStyle" parent="LightGrayColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_20</item>
+    </style>
+
+    <!-- Light Primary text color text style-->
+    <style name="LightPrimaryColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="SmallLightPrimaryColorTextViewStyle" parent="LightPrimaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="XSmallLightPrimaryColorTextViewStyle" parent="LightPrimaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="MediumLightPrimaryColorTextViewStyle" parent="LightPrimaryColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!-- Semi Bold Highlighted text color text style-->
+    <style name="SemiBoldHighLightColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/tertiary_color</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="MediumSemiBoldHighLightColorTextViewStyle" parent="SemiBoldHighLightColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="SmallSemiBoldHighLightColorTextViewStyle" parent="SemiBoldHighLightColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <!--  Bold Highlighted text color text style-->
+    <style name="BoldHighLightColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/tertiary_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="SmallBoldHighLightColorTextViewStyle" parent="BoldHighLightColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="MediumBoldHighLightColorTextViewStyle" parent="BoldHighLightColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+
+    <!-- Semi Bold status text view style-->
+    <style name="SemiBoldStatusColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/status_text_color</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="SmallSemiBoldStatusColorTextViewStyle" parent="SemiBoldStatusColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <!-- Regular black Edit text with Square background style-->
+
+
+    <!-- medium bold black Edit text style-->
+    <style name="MediumBoldBlackEditTextStyle" parent="AppTheme">
+        <item name="android:background">@null</item>
+        <item name="android:letterSpacing">0.03</item>
+<!--        <item name="android:textCursorDrawable">@drawable/shape_cursor_edit_text</item>-->
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+
+    <style name="MediumBoldMediumBlackEditTextStyle" parent="MediumBoldBlackEditTextStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+
+    <!-- medium bold rounded stroke Edit text style-->
+    <style name="MediumBoldRoundedMultiLineEditTextStyle" parent="AppTheme">
+<!--        <item name="android:background">@drawable/shape_rounded_multiline</item>-->
+        <item name="android:letterSpacing">0.03</item>
+<!--        <item name="android:textCursorDrawable">@drawable/shape_cursor_edit_text</item>-->
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+    <style name="SmallMultiLineEditTextStyle" parent="MediumBoldRoundedMultiLineEditTextStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <!-- regular rounded stroke Edit text style-->
+    <style name="RegularRoundedMultiLineEditTextStyle" parent="AppTheme">
+<!--        <item name="android:background">@drawable/shape_rounded_multiline</item>-->
+        <item name="android:letterSpacing">0.03</item>
+<!--        <item name="android:textCursorDrawable">@drawable/shape_cursor_edit_text</item>-->
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+    <style name="MediumRegularRoundedMultiLineEditTextStyle" parent="RegularRoundedMultiLineEditTextStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+
+    <!-- Semi Bold accent color text style-->
+    <style name="BoldAccentColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/accent_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="SmallBoldAccentColorTextViewStyle" parent="BoldAccentColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <!-- Text input layout style -->
+
+    <style name="TextInputLayoutTextStyle" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColorHint">@color/text_input_hint_color</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:paddingTop">@dimen/dp_7</item>
+        <item name="colorControlNormal">@color/secondary_color</item>
+        <item name="colorControlActivated">@color/text_input_activated_color</item>
+    </style>
+
+    <style name="ThemeOverlay.AppTheme.TextInputEditText.Outlined" parent="">
+        <item name="hint">2dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dp_10</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dp_10</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dp_10</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/dp_10</item>
+        <item name="boxStrokeColor">@color/tertiary_color</item>
+        <item name="hintTextColor">@color/secondary_color_new</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="colorPrimary">@color/tertiary_color</item>
+        <item name="colorAccent">@color/tertiary_color</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="textAllCaps">false</item>
+
+    </style>
+
+    <style name="ShipmentTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="textAllCaps">false</item>
+
+    </style>
+
+    <style name="RatingBarStyle" parent="@android:style/Widget.RatingBar">
+<!--        <item name="android:progressDrawable">@drawable/layer_list_rating_bar</item>-->
+    </style>
+
+    <declare-styleable name="SwipeLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level" value="1" />
+        </attr>
+
+        <attr name="flingVelocity" format="integer" />
+
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+
+    <!--Bold negative button rectangle style-->
+    <style name="NegativeButtonRoundedRectangle" parent="AppTheme">
+<!--        <item name="android:background">@drawable/negative_button_round_selector</item>-->
+        <item name="android:textColor">@color/icon_fill_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+    <style name="SmallBoldNegativeButtonRoundRectangleStyle" parent="NegativeButtonRoundedRectangle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="MediumBoldNegativeButtonRoundRectangleStyle" parent="NegativeButtonRoundedRectangle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!-- Regular button style-->
+    <style name="RegularRoundedButton" parent="AppTheme">
+<!--        <item name="android:background">@drawable/shape_round_button_selector</item>-->
+        <item name="android:textColor">@color/selector_common_btn_txt_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="SmallRegularRoundedButtonStyle" parent="RegularRoundedButton">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="MediumRegularRoundedButtonStyle" parent="RegularRoundedButton">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!--  Transparent dialog -->
+    <style name="CustomProgressDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- Light Secondary text color text style-->
+    <style name="BlackBoldColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="WhiteBoldColorTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="MediumBlackBoldColorTextViewStyle" parent="BlackBoldColorTextViewStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!-- OutlinedRoundedBox style-->
+    <style name="OutlinedRoundedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/grey_color</item>
+    </style>
+
+    <!-- MaterialComponents style-->
+    <style name="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        @style/ThemeOverlay.MaterialComponents.AutoCompleteTextView.OutlinedBox.Dense
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hint">2dp</item>
+        <item name="boxStrokeColor">@color/accent_color</item>
+        <item name="hintTextColor">@color/accent_color</item>
+    </style>
+
+    <!--new theme-->
+
+    <style name="HeadingsTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">@dimen/sp_24 </item>
+    </style>
+
+    <style name="FieldTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/secondary_color_new</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="BoldTextButtonRoundedStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/shape_rounded_accent_button_selector</item>
+        <item name="android:textColor">@color/selector_common_btn_txt_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+
+    <style name="SmallTextViewStyle" parent="AppTheme">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColorHint">@color/text_input_hint_color</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="LargeBoldTextButtonRoundedStyle" parent="BoldTextButtonRoundedStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="BoldTextLightButtonRoundedStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/shape_rounded_white_button_selector</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="LargeBoldTextLightButtonRoundedStyle" parent="BoldTextLightButtonRoundedStyle">
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="RegularSmallGreyTextViewStyle" parent="SmallTextViewStyle">
+        <item name="android:textColor">@color/text_input_activated_color</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="BoldSmallAccentTextViewStyle" parent="SmallTextViewStyle">
+        <item name="android:textColor">@color/accent_color</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TextInputYellowLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hint">2dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dp_10</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dp_10</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dp_10</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/dp_10</item>
+        <item name="boxStrokeColor">@color/tertiary_color</item>
+        <item name="hintTextColor">@color/secondary_color_new</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="colorPrimary">@color/tertiary_color</item>
+        <item name="colorAccent">@color/tertiary_color</item>
+    </style>
+
+    <style name="MediumLightGreyTextViewStyle" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/text_light_version</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
+
+    <style name="SmallBoldLightGreyTextViewStyle" parent="MediumLightGreyTextViewStyle">
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    // progressStateBar
+    <declare-styleable name="StateProgressBar">
+
+        <attr name="spb_stateBackgroundColor" format="color" />
+        <attr name="spb_stateForegroundColor" format="color" />
+
+        <attr name="spb_stateNumberBackgroundColor" format="color" />
+        <attr name="spb_stateNumberForegroundColor" format="color" />
+
+        <attr name="spb_currentStateDescriptionColor" format="color" />
+        <attr name="spb_stateDescriptionColor" format="color" />
+
+        <attr name="spb_stateSize" format="dimension" />
+
+        <attr name="spb_stateTextSize" format="dimension" />
+
+        <attr name="spb_stateDescriptionSize" format="dimension" />
+
+        <attr name="spb_stateLineThickness" format="dimension" />
+
+        <attr name="spb_checkStateCompleted" format="boolean" />
+
+        <attr name="spb_stateNumberIsDescending" format="boolean" />
+
+        <attr name="spb_animateToCurrentProgressState" format="boolean" />
+
+        <attr name="spb_enableAllStatesCompleted" format="boolean" />
+
+        <attr name="spb_descriptionTopSpaceDecrementer" format="dimension" />
+
+        <attr name="spb_descriptionTopSpaceIncrementer" format="dimension" />
+
+        <attr name="spb_animationDuration" format="integer" />
+
+        <attr name="spb_animationStartDelay" format="integer" />
+
+        <attr name="spb_justifyMultilineDescription" format="boolean" />
+
+        <attr name="spb_descriptionLinesSpacing" format="dimension" />
+
+        <attr name="spb_maxDescriptionLines" format="integer" />
+
+
+        <attr name="spb_currentStateNumber" format="enum">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+            <enum name="five" value="5" />
+        </attr>
+
+
+        <attr name="spb_maxStateNumber" format="enum">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+            <enum name="five" value="5" />
+        </attr>
+
+    </declare-styleable>
+</resources>
