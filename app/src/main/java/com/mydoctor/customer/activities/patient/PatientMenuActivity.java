@@ -22,6 +22,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 import com.mydoctor.customer.R;
 import com.mydoctor.customer.fragments.patient.MyAppointmentsFragment;
+import com.mydoctor.customer.fragments.patient.MyMedicalFragment;
 import com.mydoctor.customer.fragments.patient.NewMedicalFragment;
 import com.mydoctor.customer.fragments.patient.PatientHomeFragment;
 import com.mydoctor.customer.models.RegisterPatientResponseModel;
@@ -293,11 +294,11 @@ public class PatientMenuActivity extends AbstractActivity {
         goToFragment(myAppointmentsFragment, activity.getResources().getString(R.string.menu_my_appointments), false, false);
     }
 
-    public void moveToNewMedicalFragment() {
+    public void moveToMyMedicalFragment() {
         enableViews(false);
-        NewMedicalFragment newMedicalFragment = new NewMedicalFragment();
+        MyMedicalFragment myMedicalFragment = new MyMedicalFragment();
         imgAppLogo.setVisibility(View.GONE);
-        goToFragment(newMedicalFragment, activity.getResources().getString(R.string.menu_new_medical_examination), false, false);
+        goToFragment(myMedicalFragment, activity.getResources().getString(R.string.menu_my_medicals), false, false);
     }
 
     private class ToolbarNavigationClickListener implements View.OnClickListener {
@@ -330,8 +331,8 @@ public class PatientMenuActivity extends AbstractActivity {
                     moveToMyAppointmentFragment();
                     break;
 
-                case R.id.new_medical_examination:
-                    moveToNewMedicalFragment();
+                case R.id.my_medical_examinations:
+                    moveToMyMedicalFragment();
                     break;
 
                 default:

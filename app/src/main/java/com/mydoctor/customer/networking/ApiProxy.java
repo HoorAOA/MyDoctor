@@ -6,6 +6,7 @@ import com.mydoctor.customer.models.CommonSuccessMessageModel;
 import com.mydoctor.customer.models.DeleteAppointmentsResponseModel;
 import com.mydoctor.customer.models.GetAllAppointmentsResponseModel;
 import com.mydoctor.customer.models.GetAllClinicsResponseModel;
+import com.mydoctor.customer.models.GetPatientMedicalsResponseModel;
 import com.mydoctor.customer.models.LoginRequestModel;
 import com.mydoctor.customer.models.NewMedicalRequestModel;
 import com.mydoctor.customer.models.NewMedicalResponseModel;
@@ -30,15 +31,18 @@ public interface ApiProxy {
 
     void registerPatient(DataCallback<RegisterPatientResponseModel> dataCallback, @Body RegisterPatientRequestModel registerPatientRequestModel);
 
-    void addSpecializationUrl(DataCallback<AddSpecializationResponseModel> dataCallback, @Body SpecializationRequestModel specializationRequestModel);
+    void addSpecialization(DataCallback<AddSpecializationResponseModel> dataCallback, @Body SpecializationRequestModel specializationRequestModel);
 
-    void addMedicalExaminationUrl(DataCallback<NewMedicalResponseModel> dataCallback, @Body NewMedicalRequestModel newMedicalRequestModel, String userId);
+    void addMedicalExamination(DataCallback<NewMedicalResponseModel> dataCallback, @Body NewMedicalRequestModel newMedicalRequestModel, String userId);
 
-    void getAllAppointmentsUrl(DataCallback<GetAllAppointmentsResponseModel> dataCallback);
+    void getAllAppointments(DataCallback<GetAllAppointmentsResponseModel> dataCallback);
 
-    void addAppointmentUrl(DataCallback<AddAppointmentResponseModel> dataCallback, @Body AddAppointmentRequestModel addAppointmentRequestModel);
+    void addAppointment(DataCallback<AddAppointmentResponseModel> dataCallback, @Body AddAppointmentRequestModel addAppointmentRequestModel);
 
     void getAllClinics(DataCallback<GetAllClinicsResponseModel> dataCallback);
 
     void deleteAppointment(DataCallback<DeleteAppointmentsResponseModel> dataCallback, String appointmentId);
+
+    void getAllPatientMedicals(DataCallback<GetPatientMedicalsResponseModel> dataCallback, String userId);
+
 }

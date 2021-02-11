@@ -4,6 +4,7 @@
     <!--Common-->
     <string name="settings">Settings</string>
     <string name="menu_my_appointments">My Appointments</string>
+    <string name="menu_my_medicals">My Medicals</string>
     <string name="menu_new_appointment">New Appointment</string>
     <string name="menu_new_medical_examination">New medical</string>
     <string name="menu_title_profile">My Profile</string>

@@ -136,7 +136,7 @@ public class NewAppointmentFragment extends AbstractFragment {
     private void callNewAppointmentApi() {
         AddAppointmentRequestModel addAppointmentRequestModel = getNewAppointmentRequestModel();
         ApiProxy apiProxy = ApiProxyImpl.getInstance();
-            apiProxy.addAppointmentUrl(new DataCallback<AddAppointmentResponseModel>() {
+            apiProxy.addAppointment(new DataCallback<AddAppointmentResponseModel>() {
 
                 @Override
                 public void onSuccess(AddAppointmentResponseModel response) {

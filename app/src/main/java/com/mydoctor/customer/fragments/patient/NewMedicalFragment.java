@@ -86,7 +86,7 @@ public class NewMedicalFragment extends AbstractFragment {
     private void callNewMedicalApi() {
         NewMedicalRequestModel newMedicalRequestModel = getNewMedicalRequestModel();
         ApiProxy apiProxy = ApiProxyImpl.getInstance();
-            apiProxy.addMedicalExaminationUrl(new DataCallback<NewMedicalResponseModel>() {
+            apiProxy.addMedicalExamination(new DataCallback<NewMedicalResponseModel>() {
 
                 @Override
                 public void onSuccess(NewMedicalResponseModel response) {

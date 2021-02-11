@@ -1,7 +1,9 @@
 package com.mydoctor.customer.fragments.patient;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +18,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.Gson;
 import com.mydoctor.customer.R;
 import com.mydoctor.customer.adapters.MyAppointmentsAdapter;
+import com.mydoctor.customer.adapters.MyMedicalAdapter;
 import com.mydoctor.customer.models.AppointmentsModel;
+import com.mydoctor.customer.models.DeleteAppointmentsResponseModel;
 import com.mydoctor.customer.models.ErrorResponseModel;
 import com.mydoctor.customer.models.GetAllAppointmentsResponseModel;
+import com.mydoctor.customer.models.GetPatientMedicalsResponseModel;
+import com.mydoctor.customer.models.MedicalModel;
+import com.mydoctor.customer.models.RegisterPatientResponseModel;
 import com.mydoctor.customer.models.UserModel;
-import com.mydoctor.customer.models.DeleteAppointmentsResponseModel;
 import com.mydoctor.customer.networking.ApiProxy;
 import com.mydoctor.customer.networking.ApiProxyImpl;
 import com.mydoctor.customer.utils.AppConstants;
@@ -36,25 +42,26 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MyAppointmentsFragment extends AbstractFragment {
+public class MyMedicalFragment extends AbstractFragment {
 
     private UserModel userModel;
-    private MyAppointmentsAdapter myAppointmentsAdapter;
+    private MyMedicalAdapter myMedicalAdapter;
+    private String userId;
 
-    @BindView(R.id.rv_appointments)
-    RecyclerView rvAppointments;
+    @BindView(R.id.rv_medicals)
+    RecyclerView rvMedicals;
     @BindView((R.id.tvNoData))
     TextView tvNoData;
 
     @OnClick(R.id.floating_action_button)
     void newAppointmentClicked() {
-       NewAppointmentFragment newAppointmentFragment = new NewAppointmentFragment();
+        NewMedicalFragment newMedicalFragment = new NewMedicalFragment();
         getActivity().findViewById(R.id.img_app_logo).setVisibility(View.GONE);
         TextView txtHeader = getActivity().findViewById(R.id.txt_header);
-        txtHeader.setText(getString(R.string.menu_new_appointment));
+        txtHeader.setText(getString(R.string.menu_new_medical_examination));
         FragmentManager fragmentManager = Objects.requireNonNull(getActivity()).getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame, newAppointmentFragment);
+        fragmentTransaction.replace(R.id.frame, newMedicalFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
@@ -81,95 +88,57 @@ public class MyAppointmentsFragment extends AbstractFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_my_appointments, container, false);
+        View view = inflater.inflate(R.layout.fragment_my_medicals, container, false);
 
         ButterKnife.bind(this, view);
 
         initUI(view);
 
-        setAdapter();
+        setCustomerProfileData();
 
-        setListeners();
+        setAdapter();
 
         return view;
     }
 
-    @Override
-    public void setListeners() {
-        super.setListeners();
-
-        if (myAppointmentsAdapter != null) {
-            myAppointmentsAdapter.setAppointmentListener(new AppointmentItemListener());
-        }
-
-    }
-
-    private class AppointmentItemListener implements MyAppointmentsAdapter.AppointmentDeleteListener {
-
-        @Override
-        public void onAppointmentDelete(String Id, int index) {
-            callDeleteAppointmentApi(Id, index);
-        }
-
-        @Override
-        public void isAppointmentAvailable(boolean isAvailable) {
-            if (isAvailable) {
-                tvNoData.setVisibility(View.GONE);
-            } else {
-                tvNoData.setVisibility(View.VISIBLE);
-            }
-        }
-    }
-
-    public void callDeleteAppointmentApi(String Id, int index) {
-        ApiProxy apiProxy = ApiProxyImpl.getInstance();
-        apiProxy.deleteAppointment(new DataCallback<DeleteAppointmentsResponseModel>() {
-            @Override
-            public void onSuccess(DeleteAppointmentsResponseModel response) {
-                if (response != null) {
-                    myAppointmentsAdapter.removeItem(index);
-                }
-            }
-
-            @Override
-            public void onError(ErrorResponseModel errorResponse) {
-                UiUtils.displaySnackbar(getActivity(), errorResponse.getMessage(), AppConstants.MessageType.ERROR);
-            }
-        }, Id);
-
+    private void setCustomerProfileData() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
+        String data = sharedPreferences.getString("user", "");
+        RegisterPatientResponseModel obj = new Gson().fromJson(data, RegisterPatientResponseModel.class);
+        userId = obj.getUser().getUserId();
     }
 
     private void setAdapter() {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false);
-        rvAppointments.setLayoutManager(linearLayoutManager);
-        myAppointmentsAdapter = new MyAppointmentsAdapter(getActivity());
-        rvAppointments.setLayoutManager(new LinearLayoutManager(getActivity()));
-        rvAppointments.setAdapter(myAppointmentsAdapter);
-        callGetMyAppointmentsList();
+        rvMedicals.setLayoutManager(linearLayoutManager);
+        myMedicalAdapter = new MyMedicalAdapter(getActivity());
+        rvMedicals.setLayoutManager(new LinearLayoutManager(getActivity()));
+        rvMedicals.setAdapter(myMedicalAdapter);
+        callGetMedicalList();
     }
 
-    private void callGetMyAppointmentsList() {
+    private void callGetMedicalList() {
 
         ApiProxy apiProxy = ApiProxyImpl.getInstance();
-        apiProxy.getAllAppointments(new DataCallback<GetAllAppointmentsResponseModel>() {
+        apiProxy.getAllPatientMedicals(new DataCallback<GetPatientMedicalsResponseModel>() {
             @Override
-            public void onSuccess(GetAllAppointmentsResponseModel response) {
+            public void onSuccess(GetPatientMedicalsResponseModel response) {
 
-                List<AppointmentsModel> appointmentsModel = new ArrayList<>();
+                List<MedicalModel> medicalModel = new ArrayList<>();
 
-                appointmentsModel = response.getAppointments();
-                Log.d("Appointments:::", new Gson().toJson(appointmentsModel));
+                medicalModel = response.getMedicalExaminations();
+                Log.d("Appointments:::", new Gson().toJson(medicalModel));
 
-                if (appointmentsModel != null && !appointmentsModel.isEmpty()) {
-                    rvAppointments.setAdapter(null);
-                    rvAppointments.setAdapter(myAppointmentsAdapter);
-                    myAppointmentsAdapter.setAppointmentsList(appointmentsModel);
-                    myAppointmentsAdapter.notifyDataSetChanged();
-                } else if(appointmentsModel.isEmpty()) {
-                    if (tvNoData != null && rvAppointments != null) {
+                if (medicalModel != null && !medicalModel.isEmpty()) {
+                    rvMedicals.setAdapter(null);
+                    rvMedicals.setAdapter(myMedicalAdapter);
+                    myMedicalAdapter.setMedicalList(medicalModel);
+                    myMedicalAdapter.notifyDataSetChanged();
+                } else if(medicalModel.isEmpty()) {
+                    if (tvNoData != null && rvMedicals != null) {
                         tvNoData.setVisibility(View.VISIBLE);
-                        rvAppointments.setVisibility(View.GONE);
+                        rvMedicals.setVisibility(View.GONE);
                     }
                 }
             }
@@ -179,7 +148,7 @@ public class MyAppointmentsFragment extends AbstractFragment {
                 dismissProgressDialog();
                 UiUtils.displaySnackbar(getActivity(), errorResponse.getMessage(), AppConstants.MessageType.ERROR);
             }
-        });
+        }, userId);
     }
 
 }

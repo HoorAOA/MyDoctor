@@ -9,6 +9,7 @@ import com.mydoctor.customer.models.CommonSuccessMessageModel;
 import com.mydoctor.customer.models.DeleteAppointmentsResponseModel;
 import com.mydoctor.customer.models.GetAllAppointmentsResponseModel;
 import com.mydoctor.customer.models.GetAllClinicsResponseModel;
+import com.mydoctor.customer.models.GetPatientMedicalsResponseModel;
 import com.mydoctor.customer.models.LoginRequestModel;
 import com.mydoctor.customer.models.NewMedicalRequestModel;
 import com.mydoctor.customer.models.NewMedicalResponseModel;
@@ -69,22 +70,22 @@ public class ApiProxyImpl implements ApiProxy {
     }
 
     @Override
-    public void addSpecializationUrl(DataCallback<AddSpecializationResponseModel> dataCallback, SpecializationRequestModel specializationRequestModel) {
+    public void addSpecialization(DataCallback<AddSpecializationResponseModel> dataCallback, SpecializationRequestModel specializationRequestModel) {
         APiCaller.getInstance().getData(() -> client.create(EndPoints.class).addSpecializationUrl(HeaderParams.addHeaderParams(), specializationRequestModel), dataCallback);
     }
 
     @Override
-    public void addMedicalExaminationUrl(DataCallback<NewMedicalResponseModel> dataCallback, NewMedicalRequestModel newMedicalRequestModel, String userId) {
+    public void addMedicalExamination(DataCallback<NewMedicalResponseModel> dataCallback, NewMedicalRequestModel newMedicalRequestModel, String userId) {
         APiCaller.getInstance().getData(() -> client.create(EndPoints.class).addMedicalExaminationUrl(HeaderParams.addHeaderParamsSessionKey(), newMedicalRequestModel, userId), dataCallback);
     }
 
     @Override
-    public void getAllAppointmentsUrl(DataCallback<GetAllAppointmentsResponseModel> dataCallback) {
+    public void getAllAppointments(DataCallback<GetAllAppointmentsResponseModel> dataCallback) {
         APiCaller.getInstance().getData(() -> client.create(EndPoints.class).getAllAppointmentsUrl(HeaderParams.addHeaderParamsSessionKey()), dataCallback);
     }
 
     @Override
-    public void addAppointmentUrl(DataCallback<AddAppointmentResponseModel> dataCallback, AddAppointmentRequestModel addAppointmentRequestModel) {
+    public void addAppointment(DataCallback<AddAppointmentResponseModel> dataCallback, AddAppointmentRequestModel addAppointmentRequestModel) {
         APiCaller.getInstance().getData(() -> client.create(EndPoints.class).addAppointmentUrl(HeaderParams.addHeaderParamsSessionKey(), addAppointmentRequestModel), dataCallback);
     }
 
@@ -96,5 +97,10 @@ public class ApiProxyImpl implements ApiProxy {
     @Override
     public void deleteAppointment(DataCallback<DeleteAppointmentsResponseModel> dataCallback, String appointmentId) {
         APiCaller.getInstance().getData(() -> client.create(EndPoints.class).deleteAppointmentUrl(HeaderParams.addHeaderParamsSessionKey(), appointmentId), dataCallback);
+    }
+
+    @Override
+    public void getAllPatientMedicals(DataCallback<GetPatientMedicalsResponseModel> dataCallback, String userId) {
+        APiCaller.getInstance().getData(() -> client.create(EndPoints.class).getAllPatientMedicalsUrl(HeaderParams.addHeaderParams(), userId), dataCallback);
     }
 }

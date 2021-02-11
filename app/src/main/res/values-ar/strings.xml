@@ -5,6 +5,7 @@
 
     <string name="settings">الضبط</string>
     <string name="menu_my_appointments">حجوزاتي</string>
+    <string name="menu_my_medicals">فحوصاتي</string>
     <string name="menu_new_appointment">حجز جديد</string>
     <string name="menu_new_medical_examination">تقرير جديد</string>
     <string name="menu_title_profile">ملفي الشخصي</string>

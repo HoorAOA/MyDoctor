@@ -14,9 +14,9 @@
             android:title="@string/menu_my_appointments" />
 
         <item
-            android:id="@+id/new_medical_examination"
+            android:id="@+id/my_medical_examinations"
             android:checked="false"
-            android:title="@string/menu_new_medical_examination" />
+            android:title="@string/menu_my_medicals" />
 
     </group>
 </menu>

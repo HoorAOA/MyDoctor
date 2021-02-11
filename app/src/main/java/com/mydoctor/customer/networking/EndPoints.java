@@ -7,6 +7,7 @@ import com.mydoctor.customer.models.CommonSuccessMessageModel;
 import com.mydoctor.customer.models.DeleteAppointmentsResponseModel;
 import com.mydoctor.customer.models.GetAllAppointmentsResponseModel;
 import com.mydoctor.customer.models.GetAllClinicsResponseModel;
+import com.mydoctor.customer.models.GetPatientMedicalsResponseModel;
 import com.mydoctor.customer.models.LoginRequestModel;
 import com.mydoctor.customer.models.NewMedicalRequestModel;
 import com.mydoctor.customer.models.NewMedicalResponseModel;
@@ -62,4 +63,6 @@ interface EndPoints {
     @DELETE(ApiConstant.DELETE_APPOINTMENT)
     Call<DeleteAppointmentsResponseModel> deleteAppointmentUrl(@HeaderMap Map<String, String> headerMap, @Path("appointmentId") String appointmentId);
 
+    @GET(ApiConstant.GET_ALL_PATIENT_MEDICALS)
+    Call<GetPatientMedicalsResponseModel> getAllPatientMedicalsUrl(@HeaderMap Map<String, String> headerMap, @Path("userId") String userId);
 }

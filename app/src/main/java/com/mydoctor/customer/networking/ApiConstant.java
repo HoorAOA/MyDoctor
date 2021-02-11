@@ -13,6 +13,7 @@ public class ApiConstant {
     static final String ADD_APPOINTMENT_API_URL = "/appointments/add-appointment/";
     static final String GET_ALL_CLINICS = "/clinic/get-all-clinics/";
     static final String DELETE_APPOINTMENT = "/appointments/delete-appointment/{appointmentId}";
+    static final String GET_ALL_PATIENT_MEDICALS = "/patient/get-all-medical-examinations/{userId}";
 
     private ApiConstant() {
         throw new IllegalStateException("ApiConstant class");

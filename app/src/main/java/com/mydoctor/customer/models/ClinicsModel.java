@@ -37,7 +37,7 @@ public class ClinicsModel {
     private List<AppointmentsModel> appointments;
 
     @SerializedName("specialization")
-    private List<String> specialization;
+    private List<SpecializationModel> specialization;
 
     @SerializedName("__v")
     private String __v;

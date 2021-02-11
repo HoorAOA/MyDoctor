@@ -139,7 +139,7 @@ public class RegisterDoctorActivity extends AbstractActivity {
         SpecializationRequestModel specializationRequestModel = getSpecializationRequestModel();
 
         ApiProxy apiProxy = ApiProxyImpl.getInstance();
-        apiProxy.addSpecializationUrl(new DataCallback<AddSpecializationResponseModel>() {
+        apiProxy.addSpecialization(new DataCallback<AddSpecializationResponseModel>() {
 
             @Override
             public void onSuccess(AddSpecializationResponseModel response) {
